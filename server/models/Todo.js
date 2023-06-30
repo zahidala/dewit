@@ -9,6 +9,11 @@ const todosSchema = new mongoose.Schema({
         type: String, 
         required: true,
     },
+    due: {
+        type: Date, 
+        min: new Date(),
+        default: new Date()
+    },
     completed: {
         type: Boolean,
         required: true,
@@ -18,6 +23,9 @@ const todosSchema = new mongoose.Schema({
         ref: 'User',
         required: true,
     }
+},
+{
+    timestamps: true
 })
 
 const toDos = mongoose.model("toDos", todosSchema)
