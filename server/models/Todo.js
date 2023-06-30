@@ -30,4 +30,4 @@ const todoSchema = new mongoose.Schema({
 
 const toDo = mongoose.model("toDo", todosSchema)
 
-module.exports = toDos
+module.exports = toDo
