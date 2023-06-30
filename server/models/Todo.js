@@ -28,6 +28,6 @@ const todoSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const toDo = mongoose.model("toDo", todosSchema)
+const toDo = mongoose.model("toDo", todoSchema)
 
 module.exports = toDo
