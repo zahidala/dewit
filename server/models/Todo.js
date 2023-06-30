@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const todosSchema = new mongoose.Schema({
+const todoSchema = new mongoose.Schema({
     title: {
         type: String,
         required: true,
@@ -28,6 +28,6 @@ const todosSchema = new mongoose.Schema({
     timestamps: true
 })
 
-const toDos = mongoose.model("toDos", todosSchema)
+const toDo = mongoose.model("toDo", todosSchema)
 
 module.exports = toDos
