@@ -7,13 +7,17 @@ const port = process.env.PORT
 
 const app = express()
 
+app.use(express.json())
+
 // Import Routes
 
 const authRoute = require('./routes/auth')
+const todoRoute = require('./routes/todos')
 
 // Mount Routes
 
 app.use('/auth', authRoute)
+app.use('/todo', todoRoute)
 
 mongoose.set('strictQuery', false)
 
